@@ -1,6 +1,7 @@
-## gtfo-codecracker
+## gtfo-codefilter
 
-Hey, this codecracker aims to keep searching for terminal-codes short and simple for reruns (Secondarys, Overload, Prisoner efficiency).
+
+Hey, this codefilter aims to keep searching for terminal-codes short and simple for reruns (Secondarys, Overload, Prisoner efficiency).
 
 ⚠️ USING THIS PROGRAM IS CHEATING AS YOU SKIP FINDING ALL THE CODE PARTS TO PROGRESS! ⚠️
 
