@@ -31,19 +31,14 @@ fn lerp(a: u8, b: u8, t: f32) -> u8 {
     ((a as f32) + (b as f32 - a as f32) * t) as u8
 }
 
-/// Blend between yellow and green depending on `num`
-/// `num = 1` → pure green
-/// `num = 20` → pure yellow
+
 pub fn blend_color(num: usize) -> Color32 {
-    let t = ((num.saturating_sub(1)) as f32 / 10.0).clamp(0.0, 1.0);
-    // t = 0 → green, t = 1 → yellow
-
-    let green = Color32::from_rgb(0, 255, 0);
-    let yellow = Color32::from_rgb(255, 255, 0);
-
-    let r = lerp(green.r(), yellow.r(), t);
-    let g = lerp(green.g(), yellow.g(), t);
-    let b = lerp(green.b(), yellow.b(), t);
-
-    Color32::from_rgb(r, g, b)
+    // 1 match = Green, 10+ matches = Yellow
+    let t = ((num.saturating_sub(1)) as f32 / 9.0).clamp(0.0, 1.0);
+    
+    Color32::from_rgb(
+        lerp(0, 255, t),   // R: 0 -> 255
+        255,               // G: Always 255
+        0                  // B: Always 0
+    )
 }
