@@ -1,4 +1,4 @@
-use gtfo_codecracker::{load_words_from_str, match_pattern};
+use gtfo_codefilter::{load_words_from_str, match_pattern};
 use std::io::{self, Write};
 
 // Embed the CSV directly into the binary
